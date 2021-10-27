@@ -1,2 +1,2 @@
 # Sorting-Visualizer
-Sorting Algorithm Visualizer with 6 algorithms implemented
+Sorting Algorithm Visualizer with 5 algorithms implemented
