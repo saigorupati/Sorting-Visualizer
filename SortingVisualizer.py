@@ -116,15 +116,15 @@ class Visualizer:
 
     # Start the sorting algorithm of choice
     def start(self):
-        if self.type is 'insertion':
+        if self.type == 'insertion':
             insertion_sort(Event, self.arr)
-        elif self.type is 'bubble':
+        elif self.type == 'bubble':
             bubble_sort(Event, self.arr)
-        elif self.type is 'selection':
+        elif self.type == 'selection':
             selection_sort(Event, self.arr)
-        elif self.type is 'merge':
+        elif self.type == 'merge':
             merge_sort_wrapper(Event, self.arr)
-        elif self.type is 'quick':
+        elif self.type == 'quick':
             quick_sort_wrapper(Event, self.arr)
 
         self.type = ''
@@ -189,11 +189,11 @@ class Visualizer:
                     for button in buttons:
                         if button.is_clicked():
                             # Handles the buttons if they are clicked.
-                            if button.value is 'randomize':
+                            if button.value == 'randomize':
                                 self.generate_data()
                             # Sorting can be started by button or space bar
-                            elif button.value is 'start':
-                                if self.type is not '':
+                            elif button.value == 'start':
+                                if self.type != '':
                                     return
                             # Selects the sorting algorithm and highlights the
                             # chosen button
@@ -211,7 +211,7 @@ class Visualizer:
                 elif event.type == pg.KEYUP:
                     # Space to start
                     if event.key == pg.K_SPACE:
-                        if self.type is not '':
+                        if self.type != '':
                             return
                     # Increase speed
                     elif event.key == pg.K_EQUALS:
